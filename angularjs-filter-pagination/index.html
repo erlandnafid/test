@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title> Angular Search Feature </title>
+	<link type="text/css" rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div ng-app="app" ng-controller="ctrl" id="app" ng-cloak>
+
+		<div id="main">
+			<p><input type="text" ng-model="keyword" placeholder="search for..."></p>
+			<ul>
+				<li ng-repeat="item in data | filter:keyword | pagination:currentPage*dataLimit | limitTo:dataLimit">
+					<img ng-src="{{ item.image }}">
+					<h4><a ng-click="show(item)" target="_blank">{{ item.title }}</a></h4>
+					<p>{{ item.artist }}</p>
+					<p><span ng-repeat="material in item.materials">{{ material }} </span></p>
+				</li>
+			</ul>
+
+			<button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+				Previous
+			</button>
+			{{currentPage+1}}/{{numberOfPages()}}
+			<button ng-disabled="currentPage >= data.length/dataLimit - 1" ng-click="currentPage=currentPage+1">
+				Next
+			</button>
+		</div>
+
+		<div id="show">
+			<button ng-click="back()">back</button>
+			<img ng-src="{{ showItem.image }}">
+			<h4>{{ showItem.title }}</h4>
+			<p>{{ showItem.artist }}</p>
+			<p><span ng-repeat="material in showItem.materials">{{ material }} </span></p>
+		</div>
+
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://code.angularjs.org/1.0.0/angular-1.0.0.js"></script>
+	<script src="data.js"></script>
+	<script src="app.js"></script>
+</body>
+
+</html>
