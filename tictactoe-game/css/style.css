@@ -1,0 +1,85 @@
+html, body {
+	background-color: #FFFFFF;
+	margin: 0;
+	height: 100%;
+}
+
+div {
+	text-align: center;
+	vertical-align: middle;
+}
+
+#info {
+	font-size: 35px;
+	padding-top: 5%;
+}
+
+#gameplay {
+	font-size: 50px;
+	padding-bottom: 20px;
+}
+
+#board {
+	animation: fadein 2s;
+}
+
+button {
+	margin-top: 3%;
+	margin-bottom: 40px;
+	font-size: 20px;
+	padding: 10px 20px;
+	background-color: #366C48;
+	color: #FFFFFF;
+}
+
+button:hover {
+	background-color: #1A402D;
+}
+
+button:focus {
+	outline: 0;
+}
+
+.square:hover {
+	background-color: #1A402D !important;
+}
+
+.container {
+	animation: fadein 3s;
+	background-color: lightgray;
+	min-height: 100%;
+	background-image: url("../main-bg.jpg");
+	background-repeat: no-repeat;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	select {
+		background-color: #366C48;
+		color: #FFFFFF;
+		margin-top: 3%;
+		margin-bottom: 40px;
+		padding: 10px 20px;
+		font-size: 20px;
+		border-radius: 0;
+		-webkit-appearance: none;
+		text-align-last: center;
+	}
+
+	select:hover {
+		background-color: #1A402D;
+	}
+
+	select:focus {
+		outline: 0;
+	}
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
