@@ -9,7 +9,7 @@
 <script>
 import TopContent from "../components/TopContent.vue";
 import DefaultHeader from "./DefaultHeader.vue";
-import Nation from "../components/Nation.vue";
+import Nation from "../components/Nation/Nation.vue";
 
 export default {
   data: function() {

@@ -44,7 +44,7 @@ export default {
             this.nation.splice(1,1);
           });
         })
-        .catch(error => console.log(error));
+        .catch(error => alert('Opps could not found the nation'));
         
       this.$emit('getNation', this.nation);
     }

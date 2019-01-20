@@ -1,0 +1,14 @@
+Installation:
+- clone from github
+- cd nation-finder
+- npm install
+- npm run dev
+
+Summary:
+For this technical test i am using several technology such as:
+- webpack-simple: for module bunler
+- vue: for the front-end framework
+- bootstrap, jquery, popper.js: for styling purpose
+- axios: for consume the API
+
+
