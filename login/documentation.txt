@@ -1,0 +1,11 @@
+Sebelumnya mohon maaf karena belum bisa menyelesaikan tepat waktu dan kurang rapi.
+
+installasi:
+- clone from git
+- cd test/login
+- npm install
+- npm run dev
+
+note: 
+- untuk point no 2, 3, 4 belum saya tambahkan pesan error di bawah input text. tapi sudah saya integrasikan dengan api
+untuk melihat status username/email sudah ada atau kosong bisa di lihat pada console pada browser.
